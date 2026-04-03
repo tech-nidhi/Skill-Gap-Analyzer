@@ -60,7 +60,9 @@ Most skill analyzers rely on generic LLM calls which are slow, expensive, and pr
 ### 1. Prerequisites
 *   Python 3.10+
 *   Node.js 18+
+*   MongoDB Atlas Account (for user data storage)
 *   Groq API Key (for roadmap generation)
+*   Google Cloud Project (for OAuth)
 
 ### 2. Fast Launch (Recommended)
 We provide unified scripts to start both backend and frontend with a single command:
@@ -102,6 +104,11 @@ cp .env.example .env  # Add your GROQ_API_KEY
 cd client
 npm install
 ```
+
+### 3. Database Configuration (Shared)
+1. Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+2. Create a Database User and set Network Access to `0.0.0.0/0`.
+3. Copy your connection string and add it to your `.env` file as `MONGODB_URI`.
 
 
 ---
